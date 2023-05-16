@@ -1,0 +1,183 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.creditCardContainer {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.creditCard {
+  position: relative;
+  width: 90%;
+  max-width: 550px;
+  aspect-ratio: 2/1.15;
+  background-color: #3a4357;
+  border-radius: 25px;
+  padding: 15px;
+  overflow: hidden;
+  isolation: isolate;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.shapesContainer {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: -10%;
+  transform: rotate(40deg);
+}
+
+.cardShape1,
+.cardShape2,
+.cardShape3 {
+  --size: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cardShape1 {
+  width: var(--size);
+  height: var(--size);
+  background: rgb(59, 128, 107);
+  background: linear-gradient(
+    -90deg,
+    rgba(59, 128, 107, 1) 0%,
+    rgba(76, 146, 122, 1) 100%
+  );
+  box-shadow: 0 0 100px 0 rgba(0, 0, 0, 0.4);
+}
+
+.cardShape2 {
+  width: calc(var(--size) + 150px);
+  height: calc(var(--size) + 150px);
+  background: rgb(59, 128, 107);
+  background: linear-gradient(
+    90deg,
+    rgba(59, 128, 107, 0.3) 0%,
+    rgba(76, 146, 122, 0.8) 100%
+  );
+  box-shadow: 0 0 100px 0 rgba(0, 0, 0, 0.3);
+  z-index: -2;
+}
+
+.cardShape3 {
+  width: calc(var(--size) + 400px);
+  height: calc(var(--size) + 400px);
+  background: rgb(59, 128, 107);
+  background: linear-gradient(
+    90deg,
+    rgba(59, 128, 107, 0.2) 0%,
+    rgba(76, 146, 122, 0.3) 100%
+  );
+  z-index: -3;
+}
+
+.cardNumberInputContainer {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.creditCardHeader {
+  color: #e7f2f3;
+  font-family: monospace;
+  font-size: 18px;
+}
+
+.creditCardFooter {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.dateContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.expirationDateTitle {
+  color: #e7f2f3;
+  font-size: 16px;
+  font-family: monospace;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  font-size: 20px;
+  font-family: monospace;
+  padding: 0.18em;
+  border: none;
+  border-radius: 5px;
+}
+
+.select:not(:last-child) {
+  margin-right: 10px;
+}
+
+.twoFAContainer {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.twoFACard {
+  width: 90%;
+  max-width: 550px;
+  background-color: #438b75;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.twoFATitle {
+  font-size: 30px;
+  color: #fff;
+  margin: 0;
+}
+
+.twoFASubtitle {
+  font-size: 22px;
+  color: #d2dbdc;
+  margin-bottom: 20px;
+}
+
+.loginBtn {
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3a4357;
+  font-size: 18px;
+  color: white;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.loginBtn:hover {
+  background-color: #4f5b75;
+}
+
+@media (width > 500px) {
+  .twoFACard {
+    padding: 40px;
+  }
+
+  .creditCard {
+    padding: 25px;
+  }
+}

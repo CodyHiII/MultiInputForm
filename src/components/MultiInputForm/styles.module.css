@@ -1,0 +1,40 @@
+.formGroup {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.formGroup legend {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  position: relative;
+  top: -200;
+}
+
+.legendText {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: monospace;
+  text-transform: uppercase;
+  margin-bottom: -15px;
+}
+
+.ccInputsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.ccInputsContainer input {
+  box-sizing: content-box;
+  height: 1ch;
+  font-family: monospace;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+}
